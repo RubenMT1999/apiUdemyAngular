@@ -18,4 +18,19 @@ public class ClienteService implements IClienteService{
     public List<Cliente> findAll() {
         return clienteRepository.findAll();
     }
+
+    @Override
+    public Cliente save(Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
+
+    @Override
+    public void delete(Integer id) {
+        clienteRepository.deleteById(id);
+    }
+
+    @Override
+    public Cliente findById(Integer id) {
+        return clienteRepository.findById(id).orElse(null);
+    }
 }

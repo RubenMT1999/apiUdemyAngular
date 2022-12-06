@@ -9,4 +9,10 @@ public interface IClienteService {
 
     public List<Cliente> findAll();
 
+    public Cliente save(Cliente cliente);
+
+    public void delete(Integer id);
+
+    public Cliente findById(Integer id);
+
 }
